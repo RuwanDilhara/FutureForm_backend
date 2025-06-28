@@ -18,5 +18,8 @@ public interface UserService {
     List<UserDTO> getUsersByActiveStatus(boolean isActive);
     UserDTO getUserByEmail(String email);
     UserDTO getUserByContactNumber(String contactNumber);
+    UserDTO createUser(UserDTO user);
+    UserDTO updateUser(UserDTO user);
+    boolean deleteUserById(Integer userId);
 
 }
