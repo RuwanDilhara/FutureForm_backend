@@ -2,6 +2,7 @@ package org.icet.future_form.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.icet.future_form.dto.UserDTO;
+import org.icet.future_form.entity.User;
 import org.icet.future_form.repository.UserRepository;
 import org.icet.future_form.service.UserService;
 import org.icet.future_form.utill.enums.UserRole;
@@ -76,5 +77,23 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO getUserByContactNumber(String contactNumber) {
         return mapper.map(repository.findByContactNumber(contactNumber),UserDTO.class);
+    }
+
+    @Override
+    public UserDTO createUser(UserDTO user) {
+        return mapper.map(repository.save(mapper
+                .map(user, User.class)),UserDTO.class);
+    }
+
+    @Override
+    public UserDTO updateUser(UserDTO user) {
+        return mapper.map(repository.save(mapper
+                .map(user, User.class)),UserDTO.class);
+    }
+
+    @Override
+    public boolean deleteUserById(Integer userId) {
+        repository.deleteById(userId);
+        return true;
     }
 }
