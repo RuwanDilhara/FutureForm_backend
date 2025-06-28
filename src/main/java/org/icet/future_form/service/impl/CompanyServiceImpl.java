@@ -1,4 +1,6 @@
 package org.icet.future_form.service.impl;
 
-public class CompanyServiceImpl {
+import org.icet.future_form.service.CompanyService;
+
+public class CompanyServiceImpl implements CompanyService {
 }

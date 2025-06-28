@@ -19,7 +19,9 @@ public class UserDTO {
     private String contact;
     private String email;
     private UserRole role;
+    private LocalDate birthday;
     private String password;
     private LocalDate createAt;
     private LocalDate updateAt;
+    private boolean isActive;
 }

@@ -1,4 +1,6 @@
 package org.icet.future_form.service.impl;
 
-public class AdminServiceImpl {
+import org.icet.future_form.service.AdminService;
+
+public class AdminServiceImpl implements AdminService {
 }
