@@ -14,9 +14,9 @@ import java.time.LocalDate;
 @ToString
 public class UserDTO {
     private Integer userId;
-    private String userName;
+    private String username;
     private String fullName;
-    private String contact;
+    private String contactNumber;
     private String email;
     private UserRole role;
     private LocalDate birthday;

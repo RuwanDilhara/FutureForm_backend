@@ -19,6 +19,22 @@ public class UserController {
 
     final UserService userService;
 
+    @PostMapping("/createUser")
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO user){
+        return ResponseEntity.ok(userService.createUser(user));
+    }
+
+    @PutMapping("/updateUser")
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO user){
+        return ResponseEntity.ok(userService.createUser(user));
+    }
+
+    @DeleteMapping("/deleteUserById/{id}")
+    public ResponseEntity<Boolean> deleteUserById(@PathVariable Integer id) {
+        UserDTO user = userService.getUserById(id);
+        return user != null ? ResponseEntity.ok(userService.deleteUserById(id))
+                : ResponseEntity.notFound().build();
+    }
     @GetMapping("/getAll")
     public ResponseEntity<List<UserDTO>> getAll(){
         return ResponseEntity.ok(userService.getAll());
