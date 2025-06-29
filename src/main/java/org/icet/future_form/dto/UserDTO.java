@@ -24,4 +24,6 @@ public class UserDTO {
     private LocalDate createAt;
     private LocalDate updateAt;
     private boolean isActive;
+    private String country;
+
 }

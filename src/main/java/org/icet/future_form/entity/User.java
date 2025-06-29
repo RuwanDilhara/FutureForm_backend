@@ -26,8 +26,12 @@ public class User {
     private String email;
     private UserRole role;
     private LocalDate birthday;
+
+    @Transient
     private String password;
+
     private LocalDate createAt;
     private LocalDate updateAt;
     private boolean isActive;
+    private String country;
 }
