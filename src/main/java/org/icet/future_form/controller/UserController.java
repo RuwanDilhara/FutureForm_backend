@@ -96,4 +96,19 @@ public class UserController {
     public ResponseEntity<List<UserDTO>> getByActive(@PathVariable boolean status) {
         return ResponseEntity.ok(userService.getUsersByActiveStatus(status));
     }
+
+    @GetMapping("/ByCountry/{country}")
+    public ResponseEntity<List<UserDTO>> getByCountry(@PathVariable String country) {
+        return ResponseEntity.ok(userService.getUsersByCountry(country));
+    }
+
+    @GetMapping("/ByCity/{city}")
+    public ResponseEntity<List<UserDTO>> getByCity(@PathVariable String city) {
+        return ResponseEntity.ok(userService.getUsersByCity(city));
+    }
+
+    @GetMapping("/ByAddress/{address}")
+    public ResponseEntity<List<UserDTO>> getByAddress(@PathVariable String address) {
+        return ResponseEntity.ok(userService.getUsersByCountry(address ));
+    }
 }

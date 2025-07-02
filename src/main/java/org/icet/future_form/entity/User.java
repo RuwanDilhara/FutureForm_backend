@@ -24,14 +24,17 @@ public class User {
     private String fullName;
     private String contactNumber;
     private String email;
+    private String profileUrl;
+    private String CoverImageUrl;
     private UserRole role;
     private LocalDate birthday;
 
-    @Transient
     private String password;
 
     private LocalDate createAt;
     private LocalDate updateAt;
     private boolean isActive;
     private String country;
+    private String city;
+    private String address;
 }

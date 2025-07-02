@@ -6,15 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "admins")
+@Table(name = "Internships")
 @Entity
-public class Admin {
+public class Internship {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer adminId;
-    private String designation;
+    private Integer internshipId;
+    private String title;
+    private String description;
+    private String location;
+    private LocalDate postedDate;
+    private LocalDate deadline;
+    private boolean isOpen;
 }

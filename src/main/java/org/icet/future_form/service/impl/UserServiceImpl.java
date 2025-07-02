@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -95,5 +96,23 @@ public class UserServiceImpl implements UserService {
     public boolean deleteUserById(Integer userId) {
         repository.deleteById(userId);
         return true;
+    }
+
+    @Override
+    public List<UserDTO> getUsersByCountry(String country) {
+        return repository.findByCountry(country).stream()
+                .map(entity -> mapper.map(entity,UserDTO.class)).toList();
+    }
+
+    @Override
+    public List<UserDTO> getUsersByCity(String city) {
+        return repository.findByCity(city).stream()
+                .map(entity -> mapper.map(entity,UserDTO.class)).toList();
+    }
+
+    @Override
+    public List<UserDTO> getUsersByAddress(String address) {
+        return repository.findByAddress(address).stream()
+                .map(entity -> mapper.map(entity,UserDTO.class)).toList();
     }
 }

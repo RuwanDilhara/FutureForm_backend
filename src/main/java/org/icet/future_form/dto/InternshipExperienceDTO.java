@@ -5,17 +5,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class CompanyDTO {
-    private Integer companyId;
+public class InternshipExperienceDTO {
+    private Integer internshipExperienceId;
     private String companyName;
-    private String contactPersonName;
-    private String websiteUrl;
-    private String linkedInUrl;
-    private String industry;
-    private String companySize;
+    private String position;
     private String description;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String referenceLetterUrl;
 }

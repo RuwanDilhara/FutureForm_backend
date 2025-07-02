@@ -1,6 +1,7 @@
 package org.icet.future_form.service;
 
 import org.icet.future_form.dto.UserDTO;
+import org.icet.future_form.entity.User;
 import org.icet.future_form.utill.enums.UserRole;
 
 import java.time.LocalDate;
@@ -21,5 +22,8 @@ public interface UserService {
     UserDTO createUser(UserDTO user);
     UserDTO updateUser(UserDTO user);
     boolean deleteUserById(Integer userId);
+    List<UserDTO> getUsersByCountry(String country);
+    List<UserDTO> getUsersByCity(String city);
+    List<UserDTO> getUsersByAddress(String address);
 
 }

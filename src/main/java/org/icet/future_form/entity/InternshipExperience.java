@@ -6,21 +6,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "companies")
+@Table(name = "InternshipExperiences")
 @Entity
-public class Company {
+public class InternshipExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer companyId;
+    private Integer internshipExperienceId;
     private String companyName;
-    private String contactPersonName;
-    private String websiteUrl;
-    private String linkedInUrl;
-    private String industry;
-    private String companySize;
+    private String position;
     private String description;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String referenceLetterUrl;
 }
