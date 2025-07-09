@@ -132,27 +132,7 @@ mvn spring-boot:run
 
 ---
 
-## 📌 Enums
-
-```java
-// UserRole.java
-STUDENT, ADMIN, COMPANY
-
-// Gender.java
-MALE, FEMALE, OTHER
-```
-
----
-
 ## 👨‍💼 Author
 
 **Ruwan Dilhara**
 [GitHub](https://github.com/RuwanDilhara) | [LinkedIn](https://www.linkedin.com/in/ruwan-dilhara-260131336)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - feel free to use and extend.
-
----
